@@ -11,7 +11,7 @@ const ImageGallery = forwardRef((props, ref) => {
 
   const fetchImages = async () => {
     try {
-      const response = await fetch("http://localhost:9999/api/images");
+      const response = await fetch("https://image-review-server.onrender.com/api/images");
       if (response.ok) {
         const data = await response.json();
         setImages(data);
@@ -33,7 +33,7 @@ const ImageGallery = forwardRef((props, ref) => {
   const handleLike = async (imageId) => {
     try {
       const response = await fetch(
-        `http://localhost:9999/api/images/${imageId}/like`,
+        `https://image-review-server.onrender.com/api/images/${imageId}/like`,
         {
           method: "POST",
         }
@@ -52,7 +52,7 @@ const ImageGallery = forwardRef((props, ref) => {
 
     try {
       const response = await fetch(
-        `http://localhost:9999/api/images/${imageId}/comment`,
+        `https://image-review-server.onrender.com/api/images/${imageId}/comment`,
         {
           method: "POST",
           headers: {

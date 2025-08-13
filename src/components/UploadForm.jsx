@@ -24,7 +24,7 @@ function UploadForm({ onUploadSuccess }) {
     formData.append("image", file);
 
     try {
-      const res = await fetch("http://localhost:9999/api/upload", {
+      const res = await fetch("https://image-review-server.onrender.com/api/upload", {
         method: "POST",
         body: formData,
       });
