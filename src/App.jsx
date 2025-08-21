@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import UploadForm from "./components/UploadForm";
 import ImageGallery from "./components/ImageGallery";
+import "./App.css";
 
 function App() {
   const galleryRef = useRef();
